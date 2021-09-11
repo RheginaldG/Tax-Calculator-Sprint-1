@@ -15,7 +15,7 @@ namespace taxx_calc_prac
         }
 
 
-        public static void TaxCalcQ()
+        public static void TaxCalcQ() //user interface of tax calculator
         {
 
             
@@ -83,7 +83,7 @@ namespace taxx_calc_prac
 
         }
 
-        public abstract class OPfactory
+        public abstract class OPfactory //the factory for the tax calculator
         {
             public abstract Ifactory GetOP(string Operation);
         }
@@ -114,8 +114,8 @@ namespace taxx_calc_prac
             void calc(double yearly);
 
         }
-
-        public class Weekly : Ifactory
+        //for the different periods
+        public class Weekly : Ifactory 
         {
             public void calc(double yearly)
             {
@@ -163,7 +163,7 @@ namespace taxx_calc_prac
         }
 
 
-        public static double yearlyTH (double yearly)
+        public static double yearlyTH (double yearly) //gets the annual tax rate first before dividing it to the the periods
         {
             double taxedv;
             double YTH;
